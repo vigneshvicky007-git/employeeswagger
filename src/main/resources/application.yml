@@ -1,0 +1,53 @@
+spring:
+  servlet:
+    context-path: /employee-swagger
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Employee
+    username: postgres
+    password: root
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # When you launch the application for the first time - switch "none" at "create"
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+#server:
+#  servlet:
+#    context-path: /resource-planning
+#spring:
+#  datasource:
+#    #    url: localhost:5432/skill_partner
+#    url: jdbc:postgresql://34.83.174.154:30432/DEV
+#    username: root
+#    password: root
+#    driverClassName: org.postgresql.Driver
+#  liquibase:
+#    url: jdbc:postgresql://34.83.174.154:30432/DEV
+#    username: root
+#    password: root
+#    change-log: classpath:/db/changelog/db.changelog-master.yaml
+#  jpa:
+#    show-sql: true
+#    hibernate: ddl-auto=update
+#    dialect: org.hibernate.dialect.PostgreSQLDialect
+#    generate-ddl: true
+#
+#flexcub:
+#  security:
+#    excludePaths: /v3/flexcub-1336586310L-api-docs/**,/flexcub-1336586310L-swagger-ui.html,/swagger-ui/**,/actuator/**
+#springdoc:
+#  group-configs:
+#    - group: com.flexcub
+#      packagesToScan:
+#        - "com.flexcub.resource-planning"
+#  swagger-ui:
+#    path: /flexcub-1336586310L-swagger-ui.html
+#  api-docs:
+#    path: /v3/flexcub-1336586310L-api-docs
